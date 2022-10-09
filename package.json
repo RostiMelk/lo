@@ -1,6 +1,6 @@
 {
 	"name": "open-local",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "",
 	"main": "index.js",
 	"bin": {
@@ -11,17 +11,16 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/RostiMelk/ol.git"
+		"url": "git+https://github.com/RostiMelk/lo.git"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/RostiMelk/ol/issues"
+		"url": "https://github.com/RostiMelk/lo/issues"
 	},
-	"homepage": "https://github.com/RostiMelk/ol#readme",
+	"homepage": "https://github.com/RostiMelk/lo#readme",
 	"dependencies": {
-		"dotenv": "^16.0.0",
 		"enquirer": "^2.3.6",
 		"esm": "^3.2.25"
 	}
