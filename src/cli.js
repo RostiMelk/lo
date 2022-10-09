@@ -1,15 +1,16 @@
-const fs = require('fs');
-const path = require('path');
-const dotenv = require('dotenv');
 const { promisify } = require('util');
 const exec = promisify(require('child_process').exec);
 const { AutoComplete } = require('enquirer');
-const { spawn } = require('child_process');
 
-export async function cli(args) {
+export async function cli() {
 	try {
 		const netstat = await getNetstat();
 		const devUrls = netstat.filter((line) => line.proto === 'tcp46');
+
+		if (devUrls.length === 0) {
+			console.log('lo: no dev urls found');
+			return;
+		}
 
 		const choices = await Promise.all(
 			devUrls.map(async (line) => {
